@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<table>
+    <tr>
+        <td> <input id= 'goodid' type="checkbox" onclick="good1()"  /></td>
+        <td>
+            <p> <b>Good</b> </p>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td><input id= 'fastid' type="checkbox" onclick="fast1()" /></td>
+        <td>
+            <p> <b>Fast</b> </p>
+        </td>
+
+
+    </tr>
+
+    <tr>
+        <td><input id= 'cheapid' type="checkbox" onclick="cheap1()"/></td>
+        <td>
+            <p><b>Cheap</b> </p>
+        </td>
+    </tr>
+
+
+</table>
+       <script>
+           let good= document.getElementById("goodid");
+           let fast= document.getElementById("fastid");
+           let cheap= document.getElementById("cheapid");
+
+          function good1() {
+              if (cheap.checked && fast.checked) {
+                  document.getElementById("cheapid").checked = false;
+              }
+          }
+
+
+          function fast1() {
+               if (cheap.checked && good.checked) {
+                   document.getElementById("goodid").checked = false;
+               }
+           }
+
+
+           function cheap1() {
+                 if (good.checked && fast.checked) {
+                     document.getElementById("fastid").checked = false;
+                 }
+
+             }
+       </script>
+
+</body>
+</html>
